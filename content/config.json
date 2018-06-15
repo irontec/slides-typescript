@@ -109,7 +109,12 @@
       "12-declaration-files/01.md"
     ],
     [
-      "13-tsconfig/01.md"
+      "13-tsconfig/01.md",
+      "13-tsconfig/02.md",
+      "13-tsconfig/03.md",
+      "13-tsconfig/04.md",
+      "13-tsconfig/05.md",
+      "13-tsconfig/06.md"
     ],
     "end.md"
   ]
