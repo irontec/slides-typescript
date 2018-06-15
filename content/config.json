@@ -17,7 +17,8 @@
         "01-intro/02.md",
         "01-intro/03.md",
         "01-intro/04.md",
-        "01-intro/05.md"
+        "01-intro/05.md",
+        "01-intro/06.md"
     ],
     [
       "02-getting-started/01.md",
@@ -99,7 +100,9 @@
       "08-advanced-types/04.md",
       "08-advanced-types/05.md",
       "08-advanced-types/06.md",
-      "08-advanced-types/07.md"
+      "08-advanced-types/07.md",
+      "08-advanced-types/08.md",
+      "08-advanced-types/09.md"
 
     ],
     [
@@ -112,10 +115,15 @@
       "09-modules/07.md"
     ],
     [
-      "10-decorators/01.md"
+      "10-decorators/01.md",
+      "10-decorators/02.md",
+      "10-decorators/03.md",
+      "10-decorators/04.md"
     ],
     [
-      "11-declaration-files/01.md"
+      "11-declaration-files/01.md",
+      "11-declaration-files/02.md",
+      "11-declaration-files/03.md"
     ],
     [
       "12-tsconfig/01.md",
