@@ -84,7 +84,13 @@
       "06-functions/11.md"
     ],
     [
-      "07-generics/01.md"
+      "07-generics/01.md",
+      "07-generics/02.md",
+      "07-generics/03.md",
+      "07-generics/04.md",
+      "07-generics/05.md",
+      "07-generics/06.md",
+      "07-generics/07.md"
     ],
     [
       "08-advanced-types/01.md",
@@ -97,24 +103,27 @@
 
     ],
     [
-      "09-modules/01.md"
+      "09-modules/01.md",
+      "09-modules/02.md",
+      "09-modules/03.md",
+      "09-modules/04.md",
+      "09-modules/05.md",
+      "09-modules/06.md",
+      "09-modules/07.md"
     ],
     [
-      "10-namespaces/01.md"
+      "10-decorators/01.md"
     ],
     [
-      "11-decorators/01.md"
+      "11-declaration-files/01.md"
     ],
     [
-      "12-declaration-files/01.md"
-    ],
-    [
-      "13-tsconfig/01.md",
-      "13-tsconfig/02.md",
-      "13-tsconfig/03.md",
-      "13-tsconfig/04.md",
-      "13-tsconfig/05.md",
-      "13-tsconfig/06.md"
+      "12-tsconfig/01.md",
+      "12-tsconfig/02.md",
+      "12-tsconfig/03.md",
+      "12-tsconfig/04.md",
+      "12-tsconfig/05.md",
+      "12-tsconfig/06.md"
     ],
     "end.md"
   ]
