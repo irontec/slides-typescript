@@ -1,0 +1,11 @@
+image: node:8.11.1
+
+pages:
+  script:
+    - npm i
+    - npm run build
+    - mv dist/ public/
+  artifacts:
+    paths:
+    - public
+
