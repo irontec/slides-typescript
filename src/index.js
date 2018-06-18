@@ -6,7 +6,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 /**
  * Select current revel.js theme
  */
-import 'reveal.js/css/theme/moon.css';
+import 'reveal.js/css/theme/simple.css';
 
 //import '../reveal-irontec-theme/css/styleLight.css'
 
