@@ -1,4 +1,3 @@
-
 import baseConfig from './../content/config.json';
 
 const context = require.context('../content/slides/', true, /\.[md|html?]/);
@@ -25,9 +24,9 @@ function prepareSlide(slide) {
   } else {
     console.error("not a valid slide configuration found.");
   }
-  
+
   const isMd = slidePath.endsWith('.md');
-  
+
   const content = context(slidePath);
   if (isMd) {
       return `<section data-markdown${resolveAttrs(attrs)}><textarea data-template>${content}</textarea></section>`;
@@ -37,9 +36,5 @@ function prepareSlide(slide) {
 }
 
 export default baseConfig.slides.map(slide => {
-  if (Array.isArray(slide)) {
-    return slide.map(prepareSlide);
-  } else {
-    return prepareSlide(slide);
-  }
+  return (Array.isArray(slide))? slide.map(prepareSlide):prepareSlide(slide);
 });

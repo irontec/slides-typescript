@@ -10,130 +10,53 @@
     "hideAddressBar": true,
     "mouseWheel": true
   },
+  "plugins": {
+    "search": true,
+    "zoom":   true,
+    "menu":   true,
+    "notes":  true,
+    "highlightjs": true
+  },
   "slides": [
-    "index.md",
+    {"path": "index.md", "attrs": {"class":"intro"}},
     [
-        "01-intro/01.md",
-        "01-intro/02.md",
-        "01-intro/03.md",
-        "01-intro/04.md",
-        "01-intro/05.md",
-        "01-intro/06.md"
+        "01-intro/*"
     ],
     [
-      "02-getting-started/01.md",
-      "02-getting-started/02.md",
-      "02-getting-started/03.md",
-      "02-getting-started/04.md",
-      "02-getting-started/05.md"
+      "02-getting-started/*"
     ],
     [
-      "03-core-types/01.md",
-      "03-core-types/02.md",
-      "03-core-types/03.md",
-      "03-core-types/04.md",
-      "03-core-types/05.md",
-      "03-core-types/06.md",
-      "03-core-types/07.md",
-      "03-core-types/08.md",
-      "03-core-types/09.md",
-      "03-core-types/10.md",
-      "03-core-types/11.md",
-      "03-core-types/12.md"
+      "03-core-types/*"
     ],
     [
-      "04-interfaces/01.md",
-      "04-interfaces/02.md",
-      "04-interfaces/03.md",
-      "04-interfaces/04.md",
-      "04-interfaces/05.md",
-      "04-interfaces/06.md",
-      "04-interfaces/07.md",
-      "04-interfaces/08.md",
-      "04-interfaces/09.md",
-      "04-interfaces/10.md"
+      "04-interfaces/*"
     ],
     [
-      "05-classes/01.md",
-      "05-classes/02.md",
-      "05-classes/03.md",
-      "05-classes/04.md",
-      "05-classes/05.md",
-      "05-classes/06.md",
-      "05-classes/07.md",
-      "05-classes/08.md",
-      "05-classes/09.md",
-      "05-classes/10.md",
-      "05-classes/11.md",
-      "05-classes/12.md",
-      "05-classes/13.md",
-      "05-classes/14.md",
-      "05-classes/15.md"
+      "05-classes/*"
 
     ],
     [
-      "06-functions/01.md",
-      "06-functions/02.md",
-      "06-functions/03.md",
-      "06-functions/04.md",
-      "06-functions/05.md",
-      "06-functions/06.md",
-      "06-functions/07.md",
-      "06-functions/08.md",
-      "06-functions/09.md",
-      "06-functions/10.md",
-      "06-functions/11.md"
+      "06-functions/*"
     ],
     [
-      "07-generics/01.md",
-      "07-generics/02.md",
-      "07-generics/03.md",
-      "07-generics/04.md",
-      "07-generics/05.md",
-      "07-generics/06.md",
-      "07-generics/07.md"
+      "07-generics/*"
     ],
     [
-      "08-advanced-types/01.md",
-      "08-advanced-types/02.md",
-      "08-advanced-types/03.md",
-      "08-advanced-types/04.md",
-      "08-advanced-types/05.md",
-      "08-advanced-types/06.md",
-      "08-advanced-types/07.md",
-      "08-advanced-types/08.md",
-      "08-advanced-types/09.md"
+      "08-advanced-types/*"
 
     ],
     [
-      "09-modules/01.md",
-      "09-modules/02.md",
-      "09-modules/03.md",
-      "09-modules/04.md",
-      "09-modules/05.md",
-      "09-modules/06.md",
-      "09-modules/07.md"
+      "09-modules/*"
     ],
     [
-      "10-decorators/01.md",
-      "10-decorators/02.md",
-      "10-decorators/03.md",
-      "10-decorators/04.md"
+      "10-decorators/*"
     ],
     [
-      "11-declaration-files/01.md",
-      "11-declaration-files/02.md",
-      "11-declaration-files/03.md",
-      "11-declaration-files/04.md"
+      "11-declaration-files/*"
     ],
     [
-      "12-tsconfig/01.md",
-      "12-tsconfig/02.md",
-      "12-tsconfig/03.md",
-      "12-tsconfig/04.md",
-      "12-tsconfig/05.md",
-      "12-tsconfig/06.md"
+      "12-tsconfig/*"
     ],
-    "end.md"
+    {"path": "end.md", "attrs": {"class":"last bg-red"}}
   ]
 }

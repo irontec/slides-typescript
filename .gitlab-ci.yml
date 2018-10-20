@@ -2,6 +2,7 @@ image: node:8.11.1
 
 pages:
   script:
+    - npm cache verify
     - npm i
     - npm run build
     - mv dist/ public/
