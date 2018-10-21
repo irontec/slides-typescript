@@ -8,7 +8,8 @@ const webpack = require("webpack"),
   BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin,
   UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-  ImageminPlugin = require("imagemin-webpack-plugin").default;
+  ImageminPlugin = require("imagemin-webpack-plugin").default,
+  GenerateSW = require('workbox-webpack-plugin').GenerateSW;
 
 const { lstatSync, readdirSync } = require('fs')
 const baseConfig = require("./content/config.json");
@@ -18,7 +19,8 @@ const getDirectories = source => readdirSync(source).map(name => path.join(sourc
 
 const DIST = path.resolve(__dirname, "dist");
 const optsIfDef = {
-  plugins: baseConfig.plugins
+  plugins: baseConfig.plugins,
+  serviceWorker: baseConfig.serviceWorker
 };
 
 module.exports = {
@@ -59,19 +61,18 @@ module.exports = {
       },
       title: baseConfig.title
     }),
-    ...(baseConfig.plugins.notes
-      ? [
-          new HtmlWebpackPlugin({
-            hash: true,
-            excludeChunks: ["app"],
-            template: "node_modules/reveal.js/plugin/notes/notes.html",
-            filename: "notes.html",
-            minify: {
-              collapseWhitespace: true
-            }
-          })
-        ]
-      : []),
+    ...(baseConfig.plugins.notes ?
+      [
+        new HtmlWebpackPlugin({
+          excludeChunks: ["app"],
+          template: "node_modules/reveal.js/plugin/notes/notes.html",
+          filename: "notes.html",
+          minify: {
+            collapseWhitespace: true
+          }
+        })
+      ] : []
+    ),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
@@ -81,7 +82,15 @@ module.exports = {
     new webpack.ProvidePlugin({
       "window.Reveal": "reveal.js/",
       Reveal: "reveal.js"
-    })
+    }),
+    ...(baseConfig.serviceWorker?
+      [
+        new GenerateSW({
+          clientsClaim: true,
+          skipWaiting: true
+        })
+      ] : []
+    )
   ],
   module: {
     rules: [

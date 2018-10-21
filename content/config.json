@@ -17,6 +17,7 @@
     "notes":  true,
     "highlightjs": true
   },
+  "serviceWorker": true,
   "slides": [
     {"path": "index.md", "attrs": {"class":"intro"}},
     [

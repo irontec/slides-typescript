@@ -63,7 +63,7 @@ Promise.all(
 
 // #if plugins.menu
 import 'reveal.js-menu/menu.css';
-import { 
+import {
   faImages,
   faAdjust,
   faStickyNote,
@@ -90,4 +90,13 @@ Reveal.removeKeyBinding(83); // remove default notes.js keybinding
 Reveal.addKeyBinding({keyCode: 83, key: 'S', description: 'Speaker notes view'}, function() {
   RevealNotes.open('./notes.html'); // pass "webpacked" route
 } );
+// #endif
+
+// #if serviceWorker
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  });
+}
 // #endif
