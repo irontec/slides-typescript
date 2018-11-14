@@ -1,0 +1,41 @@
+patch-package
+--- a/node_modules/reveal.js-menu/menu.js
++++ b/node_modules/reveal.js-menu/menu.js
+@@ -17,6 +17,10 @@ var RevealMenu = window.RevealMenu || (function(){
+ 	
+ 	var module = {};
+ 
++	/**************************************************
++	 * Avoid css loading; webpack will do it for us.
++	 **************************************************/
++	/**
+ 	loadResource(options.path + 'menu.css', 'stylesheet', function() {
+ 		if (loadIcons) {
+ 			loadResource(options.path + 'font-awesome/css/all.css', 'stylesheet', loadPlugin)
+@@ -24,6 +28,9 @@ var RevealMenu = window.RevealMenu || (function(){
+ 			loadPlugin();
+ 		}
+ 	})
++	*/
++	// just load the plugin
++	loadPlugin();
+ 
+ 	function loadPlugin() {
+ 		// does not support IE8 or below
+@@ -878,6 +885,7 @@ var RevealMenu = window.RevealMenu || (function(){
+ 	}
+ 
+ 	// modified from math plugin
++	/** not needed!
+ 	function loadResource( url, type, callback ) {
+ 		var head = document.querySelector( 'head' );
+ 		var resource;
+@@ -913,7 +921,7 @@ var RevealMenu = window.RevealMenu || (function(){
+ 		// Normal browsers
+ 		head.appendChild( resource );
+ 	}
+-
++	*/
+ 	function scriptPath() {
+ 		// obtain plugin path from the script element
+ 		var path;
