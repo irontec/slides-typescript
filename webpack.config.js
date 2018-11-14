@@ -2,6 +2,7 @@
 
 const webpack = require("webpack"),
   path = require("path"),
+  cheerio = require("cheerio"),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   CopyWebpackPlugin = require("copy-webpack-plugin"),
   CleanWebpackPlugin = require('clean-webpack-plugin'),
@@ -11,7 +12,8 @@ const webpack = require("webpack"),
   ImageminPlugin = require("imagemin-webpack-plugin").default,
   GenerateSW = require('workbox-webpack-plugin').GenerateSW;
 
-const { lstatSync, readdirSync } = require('fs')
+const globSync = require('glob').sync;
+const { lstatSync, readdirSync, readFileSync } = require('fs')
 const baseConfig = require("./content/config.json");
 
 const isDirectory = source => lstatSync(source).isDirectory()
@@ -90,6 +92,10 @@ module.exports = {
           skipWaiting: true
         })
       ] : []
+    ),
+    new webpack.ContextReplacementPlugin(
+      /highlight\.js\/lib\/languages$/,
+      new RegExp(`${resolveUsedLanguages('./content/slides/**/*.{md,html,htm}').join('|')}`)
     )
   ],
   module: {
@@ -240,3 +246,26 @@ module.exports = {
     modules: [path.resolve(__dirname, "src"), "node_modules"]
   }
 };
+
+
+/**
+ * returns an array with every language used on md|html for highlight.js
+ * @param {*} path 
+ */
+function resolveUsedLanguages(path) {
+  return [...new Set(
+    globSync(path).reduce((acc, file) => {
+      const contents = readFileSync(file, 'utf8');
+      if (file.match(/\.md$/)) {
+        acc.push(...(contents.match(/(```([^\s]+))/gm) || []).map(s=>s.replace('```','')));
+      } else if (file.match(/\.html$/)) {
+        const $ = cheerio.load(contents);
+        $('code').each((ix, item) => {
+          const lang = $(item).attr("class").split(' ').map(c=>c.match(/(lang|language)-(.+)/)).filter(Boolean).map(m=>m[2]).shift();
+          lang && acc.push(lang);
+        });
+      }
+      return acc;
+    }, [])
+  )];
+}
