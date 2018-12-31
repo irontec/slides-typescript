@@ -92,6 +92,11 @@ Reveal.addKeyBinding({keyCode: 83, key: 'S', description: 'Speaker notes view'},
 } );
 // #endif
 
+// #if plugins.ga
+window.gaPropertyID = baseConfig.plugins.ga;
+require(`imports-loader?this=>window!reveal-ga/src/reveal-ga.js`);
+// #endif
+
 // #if serviceWorker
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant

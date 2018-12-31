@@ -15,7 +15,8 @@
     "zoom":   true,
     "menu":   true,
     "notes":  true,
-    "highlightjs": true
+    "highlightjs": true,
+    "ga": "UA-130231733-3"
   },
   "serviceWorker": true,
   "slides": [
