@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "1cfdb93ab0d8ca0d2437",
+    "revision": "fd127014a30fcae7641f",
     "url": "app.css"
   },
   {
-    "revision": "1cfdb93ab0d8ca0d2437",
+    "revision": "fd127014a30fcae7641f",
     "url": "app.js"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "hljs-langs/typescript.js"
   },
   {
-    "revision": "9d9be852aec6202f99a33cf9cc292d9c",
-    "url": "95c7b5a26ab51d96ee39f36c66005d67.svg"
-  },
-  {
     "revision": "6e29ff6d4e03bd5ba8b3d5556174789e",
     "url": "b97c530867a61ea60506b10a416762c4.svg"
+  },
+  {
+    "revision": "9d9be852aec6202f99a33cf9cc292d9c",
+    "url": "95c7b5a26ab51d96ee39f36c66005d67.svg"
   },
   {
     "revision": "8a63aaf795c65b9a001dfc6bf7387293",
@@ -52,13 +52,13 @@ self.__precacheManifest = [
     "url": "a0296bb86117cab30ef27fd515a87f79.svg"
   },
   {
+    "url": "3e1af3ef546b9e6ecef9f3ba197bf7d2.ttf"
+  },
+  {
     "url": "fc84e998bc29b297ea20321e4c90b6ed.ttf"
   },
   {
     "url": "89e2666c24d37055bcb60e9d2d9f7e35.ttf"
-  },
-  {
-    "url": "3e1af3ef546b9e6ecef9f3ba197bf7d2.ttf"
   },
   {
     "url": "ec4c9962ba54eb91787aa93d361c10a8.ttf"
@@ -67,10 +67,10 @@ self.__precacheManifest = [
     "url": "ee7b96fa85d8fdb8c126409326ac2d2b.ttf"
   },
   {
-    "url": "42bbe4eefcde1297b11dc4b6491e9746.ttf"
+    "url": "d1efcd4d126837fe0dcf9b6cf3a00d64.ttf"
   },
   {
-    "url": "d1efcd4d126837fe0dcf9b6cf3a00d64.ttf"
+    "url": "42bbe4eefcde1297b11dc4b6491e9746.ttf"
   },
   {
     "url": "0fc25386220a58203994ce45fb4ae570.ttf"
@@ -110,7 +110,7 @@ self.__precacheManifest = [
     "url": "media/logo_irontec.png"
   },
   {
-    "revision": "9242602d56d48d042ff09b7522440976",
+    "revision": "380ff33e47134cc4184bd27def52721f",
     "url": "index.html"
   },
   {
