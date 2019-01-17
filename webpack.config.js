@@ -61,7 +61,9 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       },
-      title: baseConfig.title
+      title: baseConfig.title || '',
+      og_url: baseConfig.og_url || '',
+      og_image: baseConfig.og_image || ''
     }),
     ...(baseConfig.plugins.notes ?
       [
@@ -250,7 +252,7 @@ module.exports = {
 
 /**
  * returns an array with every language used on md|html for highlight.js
- * @param {*} path 
+ * @param {*} path
  */
 function resolveUsedLanguages(path) {
   return [...new Set(

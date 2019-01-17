@@ -1,5 +1,7 @@
 {
   "title": "Introducción a Typescript",
+  "og_url": "https://irontec.github.io/slides-typescript/",
+  "og_image": "https://irontec.github.io/slides-typescript/media/images/logo.png",
   "options": {
     "controls": true,
     "progress": true,
